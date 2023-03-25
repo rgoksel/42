@@ -5,20 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdemiray <rdemiray@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 13:06:34 by rdemiray          #+#    #+#             */
-/*   Updated: 2023/03/23 13:06:34 by rdemiray         ###   ########.fr       */
+/*   Created: 2023/03/25 17:15:22 by rdemiray          #+#    #+#             */
+/*   Updated: 2023/03/25 17:18:01 by rdemiray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
-}
-
-int main()
-{
-	ft_putchar('a');
-	return 0;
+	write(1, &c, 1);
 }

@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdemiray <rdemiray@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 17:18:46 by rdemiray          #+#    #+#             */
-/*   Updated: 2023/03/25 17:25:59 by rdemiray         ###   ########.fr       */
+/*   Created: 2023/03/23 13:06:34 by rdemiray          #+#    #+#             */
+/*   Updated: 2023/03/25 22:25:08 by rdemiray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void);
-
-void	ft_print_alphabet(void)
+void	ft_print_comb2(void)
 {
-	char	c;
+	char	a[5];
+	int		j;
+	int		i;
 
-	c = 'a' ;
-	while (c <= 'z')
+	j = 1;
+	i = 0;
+	while (j <= 99)
 	{
-		write(1, &c, 1);
-		c++;
+		a[0] = '0' + (i / 10);
+		a[1] = '0' + (i % 10);
+		a[2] = ' ';
+		a[3] = '0' + (j / 10);
+		a[4] = '0' + (j % 10);
+		write (1, a, 5);
+		if (!(j == 99 && i == 98))
+			write(1, ", ", 2);
+		if (++j > 99)
+		{
+			i++;
+			j = i +1;
+		}
 	}	
 }

@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdemiray <rdemiray@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 17:18:46 by rdemiray          #+#    #+#             */
-/*   Updated: 2023/03/25 17:25:59 by rdemiray         ###   ########.fr       */
+/*   Created: 2023/03/25 21:11:41 by rdemiray          #+#    #+#             */
+/*   Updated: 2023/03/25 21:27:00 by rdemiray         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void);
-
-void	ft_print_alphabet(void)
+void	ft_putchar(char c)
 {
-	char	c;
+	write (1, &c, 1);
+}
 
-	c = 'a' ;
-	while (c <= 'z')
+void	ft_putnbr(int a)
+{
+	if (a == -2147483648)
 	{
-		write(1, &c, 1);
-		c++;
-	}	
+		ft_putchar('-');
+		ft_putchar('2');
+		write(1, &"147483648", 9);
+	}
+	if (a < 0)
+	{
+		putchar('-');
+		a = -a;
+		ft_putnbr(a);
+	}
+	if (a > 9)
+	{
+		ft_putnbr(a / 10);
+		ft_putnbr(a % 10);
+	}
+	else
+	{
+		ft_putchar(a + 48);
+	}
+	return (0);
 }
