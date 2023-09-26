@@ -1,7 +1,7 @@
 # 42
 all the projects of my 42 journey. currently I'm a 42 cursus student. 
 
-[1] Libft (C) - 
+[1] Libft (C) - https://github.com/rgoksel/Libft
 
 [2] ft_printf (C) - 
 
