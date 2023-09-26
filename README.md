@@ -3,7 +3,7 @@ all the projects of my 42 journey. currently I'm a 42 cursus student.
 
 [1] Libft (C) - https://github.com/rgoksel/Libft
 
-[2] ft_printf (C) - 
+[2] ft_printf (C) - https://github.com/rgoksel/ft_printf
 
 [3] Get_Next_Line (C) - 
 
