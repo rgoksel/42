@@ -14,3 +14,5 @@ all the projects of my 42 journey. currently I'm a 42 cursus student.
 [6] Push Swap (C) - | &nbsp; [Push Swap](https://github.com/rgoksel/Push-Swap)   |
 
 [7] Minishell (C - Group Project) - | &nbsp; [Minishell](https://github.com/rgoksel/Minishell)   |
+
+[8] Philo (C) - | &nbsp; [Philo](https://github.com/rgoksel/philo)
